@@ -1,0 +1,15 @@
+#####
+Let's say we want to add first.cpp file and run it. First of all we have to build the project as described. Here is a recap:
+	> mkdir build && cd build
+	> cmake ..
+	> make
+Ok. Now we have our library built. Now lets add the first.cpp to the top most directory where test.cpp is located. Now open the CMakeLists.txt and add the following 
+	> add_executable(first first.cpp)
+	> target_link_libraries(first OpenDrive)
+Here we are creating the object file named first from the first.cpp and linking it to the OpenDrive library.
+Now you run the following:
+	> cd build && make && cd ..
+This will compile the first.cpp and make the object file. You will find it in the build directory. Now run the following assuming first.cpp does not require any 
+command line argument:
+	> ./build/first
+#####

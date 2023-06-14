@@ -51,6 +51,9 @@ target_include_directories(OpenDrive
 add_executable(test-xodr test.cpp)
 target_link_libraries(test-xodr OpenDrive)
 
+add_executable(first first.cpp)
+target_link_libraries(first OpenDrive)
+
 install(
     TARGETS OpenDrive test-xodr
     INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
