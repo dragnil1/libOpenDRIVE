@@ -54,6 +54,9 @@ target_link_libraries(test-xodr OpenDrive)
 add_executable(first first.cpp)
 target_link_libraries(first OpenDrive)
 
+add_executable(carla_test ./OpenDriveMaps/carla_test.cpp)
+target_link_libraries(carla_test OpenDrive)
+
 install(
     TARGETS OpenDrive test-xodr
     INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
